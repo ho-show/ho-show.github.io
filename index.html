@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css">
+  </head>
+  <body>
+    <div class="wrapper card">
+      <h1>Short stories &#9997;</h1>
+      <p>Generate a short story by filling in the fields below.</p>
+      <form id="storyForm">
+        <label for="name">Name (required):</label>
+        <input name="name" required />
+        <div class="ideas-wrapper">
+          <p>Ideas:</p>
+          <ul class="ideas-list" data-ideas-for="name">
+            <li>Ellie</li>
+            <li>Joel</li>
+            <li>Abby</li>
+          </ul>
+        </div>
+        <label for="likes">Likes:</label>
+        <input name="likes" />
+        <div class="ideas-wrapper">
+          <p>Ideas:</p>
+          <ul class="ideas-list" data-ideas-for="likes">
+            <li>comic books</li>
+            <li>playing guitar</li>
+            <li>working out</li>
+          </ul>
+        </div>
+        <label for="dislikes">Dislikes:</label>
+        <input name="dislikes" />
+        <div class="ideas-wrapper">
+          <p>Ideas:</p>
+          <ul class="ideas-list" data-ideas-for="dislikes">
+            <li>zombies</li>
+            <li>spiders</li>
+            <li>heights</li>
+          </ul>
+        </div>
+        <label for="engine">Generator engine:</label>
+        <select name="engine">
+          <option value="text-ada-001">Ada</option>
+          <option value="text-babbage-001">Babbage</option>
+          <option value="text-curie-001" selected="selected">Curie</option>
+          <option value="text-davinci-001">Davinci</option>
+        </select>
+        <div class="button-wrapper">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <p id="emptyStories" class="wrapper active">Sorry, there are no stories yet &#128563;</p>
+    <div class="wrapper">
+      <div id="storyHistory">
+        <h2>Stories &#128214;</h2>
+        <div class="button-wrapper">
+          <button id="clear">Clear stories</button>
+        </div>
+      </div>
+      <div id="stories"></div>
+    </div>
+    <script src="src/main.js"></script>
+  </body>
+</html>
