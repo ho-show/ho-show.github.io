@@ -9,3 +9,4 @@ This submission is a short story generator that features the following:
 * Utilizes sessionStorage to keep a history of the stories should the user leave the or refresh the page.
 
 Please note that after much troubleshooting, I was unable to store OpenAI's API key as an environment variable or through a key manager. Although because the intstructions note that it's acceptable to have it exposed, I've instead broken it up into strings and put them back together so that OpenAI wouldn't automatically rotate it when publishing it to Github.
+
